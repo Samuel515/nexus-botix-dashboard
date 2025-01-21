@@ -1,6 +1,8 @@
 /** @format */
 
 import React from "react";
+import PlusAdd from "/icons/plus-add.svg";
+import LibrariesIcon from "/icons/libraries.svg";
 
 const CreateChatbot = ({ setActiveView }) => {
   return (
@@ -18,7 +20,7 @@ const CreateChatbot = ({ setActiveView }) => {
               className=" bg-gray2 hover:bg-gray-200 duration-300 border-2 cursor-pointer p-4 flex flex-col items-start gap-2 rounded-md"
               onClick={() => setActiveView("trainingModule")}
             >
-              <img src="/icons/plus-add.svg" alt="Plus Add" />
+              <img src={PlusAdd} alt="Plus Add" />
               <h1 className=" text-[18px] font-medium mt-4">
                 Start from scratch
               </h1>
@@ -31,7 +33,7 @@ const CreateChatbot = ({ setActiveView }) => {
               className=" bg-gray2 hover:bg-gray-200 duration-300 border-2 cursor-pointer p-4 flex flex-col items-start gap-2 rounded-md"
               onClick={() => setActiveView("chatbotTemplate")}
             >
-              <img src="/icons/libraries.svg" alt="Libraries" />
+              <img src={LibrariesIcon} alt="Libraries" />
               <h1 className=" text-[18px] font-medium mt-4">Select template</h1>
               <p className=" text-[14px]">
                 Select from easily customizable pre-made templates and speed up

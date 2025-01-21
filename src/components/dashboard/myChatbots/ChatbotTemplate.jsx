@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useState } from "react";
+import chatBot1 from "/chatbot-icons/chatBot-1.svg";
 
 const ChatbotTemplate = ({ setActiveView, addChatbot }) => {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
@@ -64,7 +65,7 @@ const ChatbotTemplate = ({ setActiveView, addChatbot }) => {
                 }`}
                 onClick={() => handleSelection(template.name)}
               >
-                <img src="/chatbot-icons/chatBot-1.svg" alt={template.name} />
+                <img src={chatBot1} alt={template.name} />
                 <h1 className="text-[18px] font-medium mt-2">
                   {template.name}
                 </h1>

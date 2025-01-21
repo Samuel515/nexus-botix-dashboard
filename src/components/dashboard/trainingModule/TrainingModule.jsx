@@ -7,6 +7,12 @@ import Files from "./Files";
 import Text from "./Text";
 import Notion from "./Notion";
 
+// Import icons
+import WebsiteLinksIcon from "/icons/website-links.svg";
+import FilesIcon from "/icons/files-01.svg";
+import PencilEditIcon from "/icons/pencil-edit-01.svg";
+import NotionIcon from "/icons/notion-02.svg";
+
 const TrainingModule = () => {
   // Get these values from your state management
   const [totalLinks, setTotalLinks] = useState(0);
@@ -73,7 +79,7 @@ const TrainingModule = () => {
                   onClick={() => handleLinkClick("website-links")}
                 >
                   <img
-                    src="/icons/website-links.svg"
+                    src={WebsiteLinksIcon}
                     alt="Website Links"
                     className={`transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert ${
                       activeLink === "website-links"
@@ -97,7 +103,7 @@ const TrainingModule = () => {
                   onClick={() => handleLinkClick("files")}
                 >
                   <img
-                    src="/icons/files-01.svg"
+                    src={FilesIcon}
                     alt="Files"
                     className={`transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert ${
                       activeLink === "files" ? "filter invert brightness-0" : ""
@@ -118,7 +124,7 @@ const TrainingModule = () => {
                   onClick={() => handleLinkClick("text")}
                 >
                   <img
-                    src="/icons/pencil-edit-01.svg"
+                    src={PencilEditIcon}
                     alt="Text"
                     className={`transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert ${
                       activeLink === "text" ? "filter invert brightness-0" : ""
@@ -139,7 +145,7 @@ const TrainingModule = () => {
                   onClick={() => handleLinkClick("notion")}
                 >
                   <img
-                    src="/icons/notion-02.svg"
+                    src={NotionIcon}
                     alt="Notion"
                     className={`transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert ${
                       activeLink === "notion"

@@ -2,6 +2,16 @@
 
 import React from "react";
 
+// Import icons dynamically
+import OverviewIcon from "/side-bar-icons/overview.svg";
+import MyChatbotsIcon from "/side-bar-icons/chat-bot.svg";
+import MessagesIcon from "/side-bar-icons/message.svg";
+import TrainingIcon from "/side-bar-icons/brain.svg";
+import AnalyticsIcon from "/side-bar-icons/chart-histogram.svg";
+import IntegrationsIcon from "/side-bar-icons/algorithm.svg";
+import SettingsIcon from "/side-bar-icons/setting.svg";
+import Logo from "/Logo.svg"
+
 const Sidebbar = ({
   handleClick,
   activeItem,
@@ -9,29 +19,13 @@ const Sidebbar = ({
   toggleSidebar,
 }) => {
   const menuItems = [
-    { id: "overview", label: "Overview", icon: "/side-bar-icons/overview.svg" },
-    {
-      id: "my-chatbots",
-      label: "My Chatbots",
-      icon: "/side-bar-icons/chat-bot.svg",
-    },
-    { id: "messages", label: "Messages", icon: "/side-bar-icons/message.svg" },
-    {
-      id: "training",
-      label: "Training Module",
-      icon: "/side-bar-icons/brain.svg",
-    },
-    {
-      id: "analytics",
-      label: "Analytics",
-      icon: "/side-bar-icons/chart-histogram.svg",
-    },
-    {
-      id: "integrations",
-      label: "Integrations",
-      icon: "/side-bar-icons/algorithm.svg",
-    },
-    { id: "settings", label: "Settings", icon: "/side-bar-icons/setting.svg" },
+    { id: "overview", label: "Overview", icon: OverviewIcon },
+    { id: "my-chatbots", label: "My Chatbots", icon: MyChatbotsIcon },
+    { id: "messages", label: "Messages", icon: MessagesIcon },
+    { id: "training", label: "Training Module", icon: TrainingIcon },
+    { id: "analytics", label: "Analytics", icon: AnalyticsIcon },
+    { id: "integrations", label: "Integrations", icon: IntegrationsIcon },
+    { id: "settings", label: "Settings", icon: SettingsIcon },
   ];
 
   return (
@@ -44,7 +38,7 @@ const Sidebbar = ({
       >
         {/* Logo */}
         <div className="px-6 py-5 mb-8">
-          <img src="/Logo.svg" alt="Logo" className="h-12" />
+          <img src={Logo} alt="Logo" className="h-12" />
         </div>
 
         {/* Menu Items */}

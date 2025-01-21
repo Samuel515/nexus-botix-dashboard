@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import ArrowRight from "/icons/arrow-right.svg";
 
 const Notion = () => {
   return (
@@ -16,7 +17,7 @@ const Notion = () => {
         <p className="text-[16px] text-black2">Initiate Training with Links:</p>
         <button className="flex items-center gap-1 bg-black1 text-white rounded-lg py-4 px-7">
           Create & Train Bot
-          <img src="/icons/arrow-right.svg" />
+          <img src={ArrowRight} />
         </button>
       </div>
     </div>

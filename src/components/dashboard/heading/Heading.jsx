@@ -2,6 +2,7 @@
 
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Logo from "/Logo.svg"
 
 const Heading = ({ activeItem, toggleSidebar }) => {
   // Define a title mapping for each item
@@ -22,7 +23,7 @@ const Heading = ({ activeItem, toggleSidebar }) => {
           {titles[activeItem]}
         </h1>
         <div className=" md:hidden flex justify-between items-center">
-          <img src="/Logo.svg" alt="Logo" className="h-8" />
+          <img src={Logo} alt="Logo" className="h-8" />
           <RxHamburgerMenu
             onClick={toggleSidebar}
             size={20}

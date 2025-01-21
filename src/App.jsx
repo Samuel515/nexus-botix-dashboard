@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Introduction from "./components/welcomePages/introduction";
 import BasicInformation from "./components/welcomePages/BasicInformation";
 import UseCaseSelection from "./components/welcomePages/UseCaseSelection";

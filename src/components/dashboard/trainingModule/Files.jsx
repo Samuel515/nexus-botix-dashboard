@@ -2,6 +2,11 @@
 
 import React, { useState, useRef, useEffect } from "react";
 
+// Import icons dynamically
+import FileUploadIcon from "/icons/file-upload.svg";
+import DeleteIcon from "/icons/delete.svg";
+import ArrowRightIcon from "/icons/arrow-right.svg";
+
 const Files = ({ setTotalFiles }) => {
   const [files, setFiles] = useState([]);
   const [dragActive, setDragActive] = useState(false);
@@ -89,7 +94,7 @@ const Files = ({ setTotalFiles }) => {
           accept={acceptedTypes.join(",")}
           onChange={handleFileChange}
         />
-        <img src="/icons/file-upload.svg" alt="upload icon" />
+        <img src={FileUploadIcon} alt="upload icon" />
         <h1 className="text-[20px] text-black2 my-4">
           Click to upload files or Drag & Drop
         </h1>
@@ -109,7 +114,7 @@ const Files = ({ setTotalFiles }) => {
             >
               <div className="flex items-center space-x-3">
                 <img
-                  src="/icons/file-upload.svg"
+                  src={FileUploadIcon}
                   alt="file"
                   className="w-6 h-6"
                 />
@@ -127,7 +132,7 @@ const Files = ({ setTotalFiles }) => {
                 }}
                 className="p-2 hover:bg-gray-100 rounded-full"
               >
-                <img src="/icons/delete.svg" alt="delete" className="w-5 h-5" />
+                <img src={DeleteIcon} alt="delete" className="w-5 h-5" />
               </button>
             </div>
           ))}
@@ -138,7 +143,7 @@ const Files = ({ setTotalFiles }) => {
         <p className="text-[16px] text-black2">Initiate Training with Links:</p>
         <button className="flex items-center gap-1 bg-black1 text-white rounded-lg py-4 px-7">
           Create & Train Bot
-          <img src="/icons/arrow-right.svg" />
+          <img src={ArrowRightIcon} alt="arrow right" />
         </button>
       </div>
     </div>

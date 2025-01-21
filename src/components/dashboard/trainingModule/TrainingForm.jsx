@@ -8,9 +8,7 @@ const TrainingForm = ({ setTotalLinks, setTotalCharacters }) => {
   const [manualLinks, setManualLinks] = useState([]);
   const [manualLink, setManualLink] = useState("");
 
-  // Update the totals whenever the crawledLinks or manualLinks state changes
   useEffect(() => {
-    // Update total links and total characters in the parent component
     const totalLinks = crawledLinks.length + manualLinks.length;
     const totalCharacters =
       crawledLinks.reduce((total, link) => total + link.characters, 0) +
@@ -20,42 +18,37 @@ const TrainingForm = ({ setTotalLinks, setTotalCharacters }) => {
     setTotalCharacters(totalCharacters);
   }, [crawledLinks, manualLinks, setTotalLinks, setTotalCharacters]);
 
-  // Handle crawl button click
   const handleCrawl = () => {
     if (websiteUrl.trim()) {
       if (crawledLinks.length + manualLinks.length < 5) {
         const newLink = {
           url: websiteUrl,
-          characters: websiteUrl.length * 10, // Simulated character count
+          characters: websiteUrl.length * 10,
         };
-
         setCrawledLinks((prevLinks) => [...prevLinks, newLink]);
-        setWebsiteUrl(""); // Clear the input after crawling
+        setWebsiteUrl("");
       } else {
         alert("You can only add up to 5 links in total.");
       }
     }
   };
 
-  // Handle manual link addition
   const handleAddManualLink = () => {
     if (manualLink.trim()) {
       if (crawledLinks.length + manualLinks.length < 5) {
         const newLink = {
           url: manualLink,
-          characters: manualLink.length * 10, // Simulated character count
+          characters: manualLink.length * 10,
           type: "manual",
         };
-
         setManualLinks((prevLinks) => [...prevLinks, newLink]);
-        setManualLink(""); // Clear the input after adding
+        setManualLink("");
       } else {
         alert("You can only add up to 5 links in total.");
       }
     }
   };
 
-  // Handle link deletion
   const handleDeleteLink = (index, type) => {
     if (type === "manual") {
       setManualLinks((prevLinks) => prevLinks.filter((_, i) => i !== index));
